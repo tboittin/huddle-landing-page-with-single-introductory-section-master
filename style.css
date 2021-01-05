@@ -22,6 +22,7 @@ html {
 body {
   background-image: url("./images/bg-mobile.svg");
   background-repeat: no-repeat;
+  background-size: 100%;
   display: flex;
   justify-content: center;
 }
@@ -37,6 +38,7 @@ body {
   width: 100%;
   display: inherit;
   flex-direction: column;
+  align-items: center;
   margin-bottom: 60px;
 }
 .wrapper .left--logo {
@@ -50,6 +52,7 @@ body {
 }
 .wrapper .left--hero img {
   width: 100%;
+  max-width: 300px;
 }
 .wrapper .right {
   width: 100%;
@@ -67,12 +70,16 @@ body {
 .wrapper .right--description {
   margin-bottom: 20px;
 }
+.wrapper .right--description p {
+  max-width: 500px;
+}
 .wrapper .right--register {
   color: #674baf;
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
   border-radius: 30px;
   width: 70%;
+  max-width: 350px;
   padding: 10px;
   border: none;
   box-shadow: 1px 1px 4px 1px #3f2e6b;
@@ -94,11 +101,11 @@ body {
   margin: 0 7px;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 992px) {
   body {
     height: 100vh;
     background-image: url("./images/bg-desktop.svg");
-    background-size: 82%;
+    background-size: cover;
     align-items: center;
   }
 
@@ -113,8 +120,14 @@ body {
     height: 90%;
     margin-bottom: 0;
   }
+  .wrapper .left--logo {
+    align-self: flex-start;
+  }
   .wrapper .left--logo img {
-    width: 30%;
+    width: 66%;
+  }
+  .wrapper .left--hero img {
+    max-width: 2000px;
   }
   .wrapper .right {
     height: 90%;

@@ -18,6 +18,7 @@ html {
 body {
     background-image: url('./images/bg-mobile.svg');
     background-repeat: no-repeat;
+    background-size: 100%;
     display: flex;
     justify-content: center;
 }
@@ -33,6 +34,7 @@ body {
         width: 100%;
         display: inherit;
         flex-direction: column;
+        align-items: center;
         margin-bottom: 60px;
 
         &--logo {
@@ -48,6 +50,7 @@ body {
 
             img {
                 width: 100%;
+                max-width: 300px;
             }
         }
     }
@@ -68,6 +71,10 @@ body {
 
         &--description {
             margin-bottom: 20px;
+
+            p {
+                max-width: 500px;
+            }
         }
 
         &--register {
@@ -76,6 +83,7 @@ body {
             font-family: $font-heading;
             border-radius: 30px;
             width: 70%;
+            max-width: 350px;
             padding: 10px;
             border: none;
             box-shadow: 1px 1px 4px 1px hsl(257, 40%, 30%);
@@ -105,11 +113,11 @@ body {
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 992px) {
     body {
         height: 100vh;
         background-image: url('./images/bg-desktop.svg');
-        background-size: 82%;
+        background-size: cover;
         align-items: center;
     }
 
@@ -125,8 +133,16 @@ body {
             margin-bottom: 0;
 
             &--logo {
+                align-self: flex-start;
+
                 img {
-                    width: 30%;
+                    width: 66%;
+                }
+            }
+
+            &--hero {
+                img {
+                    max-width: 2000px;
                 }
             }
         }
