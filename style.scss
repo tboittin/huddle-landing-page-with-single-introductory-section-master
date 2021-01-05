@@ -1,0 +1,166 @@
+@import './reset.scss';
+
+$violet: hsl(257, 40%, 49%);
+$magenta: hsl(300, 69%, 71%);
+
+$font-heading: 'Poppins',
+sans-serif;
+$font-body: 'Open Sans',
+sans-serif;
+
+html {
+    font-family: $font-body;
+    color: white;
+    background-color: $violet;
+    font-size: 16px;
+}
+
+body {
+    background-image: url('./images/bg-mobile.svg');
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 80%;
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35px;
+
+    .left {
+        width: 100%;
+        display: inherit;
+        flex-direction: column;
+        margin-bottom: 60px;
+
+        &--logo {
+            margin-bottom: 60px;
+
+            img {
+                width: 40%;
+            }
+        }
+
+        &--hero {
+            align-items: center;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .right {
+        width: 100%;
+        display: inherit;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 60px;
+        text-align: center;
+
+        h1 {
+            font-family: $font-heading;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        &--description {
+            margin-bottom: 20px;
+        }
+
+        &--register {
+            color: $violet;
+            font-size: 1rem;
+            font-family: $font-heading;
+            border-radius: 30px;
+            width: 70%;
+            padding: 10px;
+            border: none;
+            box-shadow: 1px 1px 4px 1px hsl(257, 40%, 30%);
+            margin-bottom: 60px;
+        }
+
+        &--socials {
+            ul {
+                display: flex;
+                justify-content: space-around;
+
+                li {
+                    border-radius: 100%;
+                    border: 1px solid white;
+                    height: 1rem;
+                    width: 1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 7px;
+                    margin: 0 7px;
+                }
+            }
+
+
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    body {
+        height: 100vh;
+        background-image: url('./images/bg-desktop.svg');
+        background-size: 82%;
+        align-items: center;
+    }
+
+    .wrapper {
+        width: 90%;
+        height: 90%;
+        margin-top: 0;
+        flex-direction: row;
+
+        .left {
+            width: 55%;
+            height: 90%;
+            margin-bottom: 0;
+
+            &--logo {
+                img {
+                    width: 30%;
+                }
+            }
+        }
+
+        .right {
+            height: 90%;
+            width: 45%;
+            align-items: flex-start;
+            justify-content: center;
+            margin-left: 5%;
+            margin-bottom: 0;
+
+            h1 {
+
+                font-size: 2.6rem;
+                text-align: left;
+            }
+
+            &--description {
+
+                text-align: left;
+                font-size: 1.2rem;
+            }
+
+            &--register {
+                width: 40%;
+                margin-bottom: 0;
+            }
+
+            &--socials {
+                position: absolute;
+                bottom: 10px;
+                right: 50px;
+            }
+        }
+    }
+}
