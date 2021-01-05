@@ -74,6 +74,7 @@ body {
   max-width: 500px;
 }
 .wrapper .right--register {
+  cursor: pointer;
   color: #674baf;
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
@@ -85,11 +86,17 @@ body {
   box-shadow: 1px 1px 4px 1px #3f2e6b;
   margin-bottom: 60px;
 }
+.wrapper .right--register:hover {
+  background-color: #e882e8;
+  color: white;
+  animation: fadeinButton 0.5s;
+}
 .wrapper .right--socials ul {
   display: flex;
   justify-content: space-around;
 }
 .wrapper .right--socials ul li {
+  cursor: pointer;
   border-radius: 100%;
   border: 1px solid white;
   height: 1rem;
@@ -99,6 +106,14 @@ body {
   justify-content: center;
   padding: 7px;
   margin: 0 7px;
+}
+.wrapper .right--socials ul li svg {
+  height: 100%;
+}
+.wrapper .right--socials ul li:hover {
+  border: 1px solid #e882e8;
+  color: #e882e8;
+  animation: fadeinSocials 0.5s;
 }
 
 @media (min-width: 992px) {
@@ -153,6 +168,24 @@ body {
     position: absolute;
     bottom: 10px;
     right: 50px;
+  }
+}
+@keyframes fadeinButton {
+  from {
+    background-color: white;
+    color: #674baf;
+  }
+  to {
+    background-color: #e882e8;
+    color: white;
+  }
+}
+@keyframes fadeinSocials {
+  from {
+    color: white;
+  }
+  to {
+    color: #e882e8;
   }
 }
 

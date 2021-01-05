@@ -78,6 +78,7 @@ body {
         }
 
         &--register {
+            cursor: pointer;
             color: $violet;
             font-size: 1rem;
             font-family: $font-heading;
@@ -88,6 +89,12 @@ body {
             border: none;
             box-shadow: 1px 1px 4px 1px hsl(257, 40%, 30%);
             margin-bottom: 60px;
+
+            &:hover {
+                background-color: $magenta;
+                color: white;
+                animation: fadeinButton .5s;
+            }
         }
 
         &--socials {
@@ -96,6 +103,7 @@ body {
                 justify-content: space-around;
 
                 li {
+                    cursor: pointer;
                     border-radius: 100%;
                     border: 1px solid white;
                     height: 1rem;
@@ -105,7 +113,20 @@ body {
                     justify-content: center;
                     padding: 7px;
                     margin: 0 7px;
+
+                    svg {
+                        height: 100%;
+                    }
+
+
+                    &:hover {
+                        border: 1px solid $magenta;
+                        color: $magenta;
+                        animation: fadeinSocials .5s;
+                    }
                 }
+
+
             }
 
 
@@ -178,5 +199,27 @@ body {
                 right: 50px;
             }
         }
+    }
+}
+
+@keyframes fadeinButton {
+    from {
+        background-color: white;
+        color: $violet;
+    }
+
+    to {
+        background-color: $magenta;
+        color: white;
+    }
+}
+
+@keyframes fadeinSocials {
+    from {
+        color: white;
+    }
+
+    to {
+        color: $magenta;
     }
 }
